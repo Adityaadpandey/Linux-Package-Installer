@@ -1,5 +1,6 @@
 from browser import Browser
 from lang import Progams
+from prog import Programs
 
 
 
@@ -42,11 +43,32 @@ def pr():
         Progams.rust()
     elif choice == 13:
         Progams.go_lang()
+
+def pg():
+    print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli')
+    choice = int(input('\nEnter your choice: '))
+    if choice == 1:
+        Programs.vs_code()
+    elif choice == 2:
+        Programs.atom()
+    elif choice == 3:
+        Programs.postman()
+    elif choice == 4:
+        Programs.vim()
+    elif choice == 5:
+        Programs.sublime_text()
+    elif choice == 6:
+        Programs.git()
+    elif choice == 7:
+        Programs.github_cli()
+
     
 if __name__ == '__main__':
-    print('\n1. Browser \n2. Programming Language')
+    print('\n1. Browser \n2. Programming Language \n3. Programming Tools')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         br()
     elif choice == 2:
         pr()
+    elif choice == 3:
+        pg()
