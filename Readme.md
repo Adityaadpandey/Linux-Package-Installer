@@ -6,3 +6,7 @@ This is basically a python file to get things download and update any linux dist
 ## To Install this is using Curl
     
     sh -c "$(curl -fsSl https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/install.sh)"
+
+## To Run this direclty from the terminal
+    
+    python3 -c "$(curl -fsSl https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/main.py)"
