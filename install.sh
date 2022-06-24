@@ -10,5 +10,3 @@ git clone https://github.com/Adityaadpandey/Linux-Package-Installer.git
 
 
 python3 Linux-Package-Installer/main.py
-
-# sudo rm -r Linux-Package-Installer
