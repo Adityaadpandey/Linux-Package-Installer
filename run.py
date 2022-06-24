@@ -1,6 +1,6 @@
-from browser import Browser
-from lang import Progams
-from prog import Programs
+from Test.browser import Browser
+from Test.lang import Progams
+from Test.prog import Programs
 
 
 
