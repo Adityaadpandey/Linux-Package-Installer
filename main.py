@@ -49,6 +49,7 @@ class Program():
         os.system('echo Github-cli is installed')
 
 
+
 class Progams():
     def python():
         os.system("sudo apt install python3 -y")
