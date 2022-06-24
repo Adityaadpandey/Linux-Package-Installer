@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# sudo apt install git
+sudo apt install git
 
 git clone https://github.com/Adityaadpandey/Linux-Package-Installer.git
 
