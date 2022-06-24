@@ -3,14 +3,6 @@
 
 This is basically a python file to get things download and update any linux distro
 
-## Things it does
-
-#### Update apt packages
-
-#### Install Brave Browser
-
-#### Install Vs Code
-
-#### Install Node@16.2.3
-
-#### Install Yarn Globally
+## To Install this is using Curl
+    
+    ```sh -c "$(curl -fsSl https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/install.sh)"```
