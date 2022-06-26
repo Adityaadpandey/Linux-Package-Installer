@@ -194,7 +194,7 @@ def pg():
 
     
 def main():
-        print('\n1. Browser \n2. Programming Language \n3. Programming Tools')
+        print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Exit')
         choice = int(input('\nEnter your choice: '))
         if choice == 1:
             br()
@@ -202,3 +202,5 @@ def main():
             pr()
         elif choice == 3:
             pg()
+        elif choice == 4:
+            exit()
