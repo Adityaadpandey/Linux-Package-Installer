@@ -1,4 +1,5 @@
 #!/bin/bash
+
 filename=Linux-Package-Installer
 if test -f "$filename";
 then
@@ -15,4 +16,3 @@ else
     python3 main.py
     cd ..
     sudo rm -r Linux-Package-Installer
-fi
