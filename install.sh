@@ -16,3 +16,5 @@ else
     python3 main.py
     cd ..
     sudo rm -r Linux-Package-Installer
+
+fi
