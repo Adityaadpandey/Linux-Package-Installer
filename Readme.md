@@ -7,6 +7,6 @@ This is basically a python file to get things download and update any linux dist
     
     sh -c "$(curl -fsSl https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/install.sh)"
 
-## To Run this direclty from the terminal (For Linux Mint)
+## To Run this direclty from the terminal (For Linux Mint, Ubuntu & All Fedora based distros)
     
     python3 -c "$(curl -fsSl https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/LinuxMint/run.py)"
