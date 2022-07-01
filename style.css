@@ -84,10 +84,22 @@ h4{
 .code_part{
     background-color: rgb(44, 44, 44);
     /* font-size: 1.25em; */
-    width: 42%;
+    width: 68%;
     height: 5%;
 }
 .oooo{
   margin-left: 2em;
-  padding: 0 2em 2em 0;
+  margin-right: -7em;
+  /* padding: 0 2em 2em 0; */
+}
+.code_part1{
+  background-color: rgb(44, 44, 44);
+  /* font-size: 1.25em; */
+  width: 78%;
+  height: 5%;
+}
+.ooo{
+  margin-left: 2em;
+  margin-right: -7em;
+  /* padding: 0 2em 2em 0; */
 }
