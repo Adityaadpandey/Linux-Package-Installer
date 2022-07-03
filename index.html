@@ -47,7 +47,13 @@
         <p class="oooo" id="copy">
           sh -c "$(curl -fsSl
           https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/install.sh)"
-          <button type="button" onclick="copyEvent('copy')">Copy</button>
+
+          <img
+            class="imggg1"
+            src="cpy.png"
+            alt=""
+            onclick="copyEvent('copy')"
+          />
         </p>
       </div>
       <h5>
@@ -58,7 +64,8 @@
         <p class="ooo" id="lol">
           python3 -c "$(curl -fsSl
           https://raw.githubusercontent.com/Adityaadpandey/Linux-Package-Installer/master/LinuxMint/run.py)"
-          <button type="button" onclick="copyEvent('lol')">Copy</button>
+          <!-- <button class="btn" type="button" onclick="copyEvent('lol')">Copy</button> -->
+          <img class="imggg1" src="cpy.png" alt="" onclick="copyEvent('lol')" />
         </p>
       </div>
     </div>
@@ -66,6 +73,7 @@
       function copyEvent(id) {
         var str = document.getElementById(id);
         window.getSelection().selectAllChildren(str);
+        console.log(str);
         document.execCommand("Copy");
       }
     </script>

@@ -10,7 +10,7 @@
 }
 
 .up {
- 
+
   position: relative;
   top: 0;
   left: 45%;
@@ -40,66 +40,98 @@
   /* z-index: -1; */
 }
 
-.mid{
-    width: 170vh;
-    height: 80vh;
-    position: absolute;
-    top: 5vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #4d4d4d;
-    padding-top: 2px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 100px #d2ff7e;
+.mid {
+  width: 170vh;
+  height: 80vh;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 58px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #4d4d4d;
+  padding-top: 2px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 100px #d2ff7e;
 }
 
 
-p{
+p {
   margin-right: 10em;
   padding: 0 2em 2em 0;
   color: rgb(255, 255, 255);
   font-size: 1em;
 
 }
-b{
-    color: rgb(255, 255, 115);
+
+b {
+  color: rgb(255, 255, 115);
 }
-h4{
-    color: rgb(255, 255, 115);
-    font-size: 1.25em;
-    text-align: center;
+
+h4 {
+  color: rgb(255, 255, 115);
+  font-size: 1.25em;
+  text-align: center;
 }
-.cent{
-    text-align: center;
-    color: rgb(255, 133, 19);
+
+h5 {
+  font-size: 1em;
 }
-.code_part{
-    background-color: rgb(44, 44, 44);
-    /* font-size: 1.25em; */
-    width: 72%;
-    height: 5%;
+
+.cent {
+  text-align: center;
+  color: rgb(255, 133, 19);
 }
-.oooo{
+
+.code_part {
+  background-color: rgb(44, 44, 44);
+  /* font-size: 1.25em; */
+  width: 72%;
+  height: 6%;
+  margin-top: -20px;
+}
+
+.oooo {
   margin-left: 2em;
   margin-right: -7em;
   /* padding: 0 2em 2em 0; */
 }
-.code_part1{
+
+.code_part1 {
   background-color: rgb(44, 44, 44);
   /* font-size: 1.25em; */
   width: 81%;
-  height: 5%;
+  height: 7%;
 }
-.ooo{
+
+.ooo {
   margin-left: 2em;
   margin-right: -7em;
+  margin-top: 10px;
   /* padding: 0 2em 2em 0; */
+}
+
+.btn {
+  background-color: rgb(255, 133, 19);
+  border-radius: 10px;
+  color: white;
+  /* padding: 10px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.imggg1 {
+  width: 3%;
+  height: 80%;
+  /* z-index: -1; */
 }
