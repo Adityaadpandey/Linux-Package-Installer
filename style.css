@@ -113,7 +113,7 @@ h5 {
 .ooo {
   margin-left: 2em;
   margin-right: -7em;
-  margin-top: 10px;
+  padding-bottom: 10%;
   /* padding: 0 2em 2em 0; */
 }
 
@@ -133,5 +133,6 @@ h5 {
 .imggg1 {
   width: 3%;
   height: 80%;
+  
   /* z-index: -1; */
 }
