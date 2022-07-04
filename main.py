@@ -1,5 +1,5 @@
 import distro
-from Apt.run import main as apt_main
+from Class.run import main as apt_main
 
 name = distro.linux_distribution()
 

@@ -11,6 +11,7 @@ then
 else
     sudo apt install git
     git clone https://github.com/Adityaadpandey/Linux-Package-Installer.git
+    pip3 install distro
     sudo apt install python3-pip
     cd  Linux-Package-Installer/
     python3 main.py
