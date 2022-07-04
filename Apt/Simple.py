@@ -135,7 +135,7 @@ class Program():
         os.system('echo Github-cli is installed')
 
 def br():
-    print('\n1. brave  \n2. chrome \n3. firefox')
+    print('\n1. brave  \n2. chrome \n3. firefox \n4. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Browser.brave()
@@ -143,9 +143,11 @@ def br():
         Browser.chrome()
     elif choice == 3:
         Browser.firefox()
+    elif choice == 4:
+        exit()
 
 def pr():
-    print('\n1. python \n2. java \n3. node \n4. c \n5. c++ \n6. c# \n7. go \n8. ruby \n9. php \n10. java script \n11. kotlin \n12. rust \n13. go lang')
+    print('\n1. python \n2. java \n3. node \n4. c \n5. c++ \n6. c# \n7. go \n8. ruby \n9. php \n10. java script \n11. kotlin \n12. rust \n13. go lang \n14. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Progams.python()
@@ -173,9 +175,11 @@ def pr():
         Progams.rust()
     elif choice == 13:
         Progams.go_lang()
+    elif choice == 14:
+        exit()
 
 def pg():
-    print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli')
+    print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli \n8. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Program.vs_code()
@@ -191,6 +195,8 @@ def pg():
         Program.git()
     elif choice == 7:
         Program.github_cli()
+    elif choice == 8:
+        exit()
 
 
 while True:
