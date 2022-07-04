@@ -1,6 +1,6 @@
-from utils.Brow import Browser
-from utils.Lang import Progams
-from utils.Programs import Program
+from Utils.Brow import Browser
+from Utils.Lang import Progams
+from Utils.Programs import Program
 
 def br():
     print('\n1. brave  \n2. chrome \n3. firefox')
