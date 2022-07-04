@@ -192,16 +192,15 @@ def pg():
     elif choice == 7:
         Program.github_cli()
 
-    
-def main():
-    while True:
-        print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Exit')
-        choice = int(input('\nEnter your choice: '))
-        if choice == 1:
+
+while True:
+    print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Exit')
+    choice = int(input('\nEnter your choice: '))
+    if choice == 1:
             br()
-        elif choice == 2:
+    elif choice == 2:
             pr()
-        elif choice == 3:
+    elif choice == 3:
             pg()
-        elif choice == 4:
+    elif choice == 4:
             exit()
