@@ -101,6 +101,8 @@ class Program():
         os.system('sudo apt-get install atom')
         os.system('echo Atom is installed')
     
+
+    
     def postman():
         os.system('sudo apt install snapd')
         os.system('sudo snap install postman')
