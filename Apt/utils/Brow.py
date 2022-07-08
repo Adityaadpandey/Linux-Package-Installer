@@ -17,3 +17,9 @@ class Browser():
     def firefox():
         os.system('sudo apt install firefox')
         os.system('echo firefox is installed')
+
+    def opera():
+        os.system('wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -')
+        os.system('sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-stable/ stable non-free"')
+        os.system('sudo apt install opera-stable')
+        os.system('echo opera is installed')

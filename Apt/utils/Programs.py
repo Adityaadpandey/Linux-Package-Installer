@@ -48,3 +48,36 @@ class Program():
         os.system('sudo apt update')
         os.system('sudo apt install gh')
         os.system('echo Github-cli is installed')
+
+    def docker():
+        os.system('sudo apt install docker.io')
+        os.system('docker --version')
+        os.system('sudo systemctl start docker')
+        os.system('sudo systemctl enable docker')
+        os.system('sudo systemctl status docker')
+    
+    def docker_compose():
+        os.system('sudo apt install docker-compose')
+        os.system('docker-compose --version')
+        os.system('echo Docker-compose is installed')
+    
+    def docker_machine():
+        os.system('sudo apt install docker-machine')
+        os.system('docker-machine --version')
+        os.system('echo Docker-machine is installed')
+    
+    def intelli_j():
+        os.system('sudo add-apt-repository ppa:mmk2410/intellij-idea-community')
+        os.system('sudo apt update')
+        os.system('sudo apt install intellij-idea-community')
+
+    def snap():
+        os.system('sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup')
+        os.system('sudo apt update')
+        os.system('sudo apt install snapd')
+    
+    def pycahrm():
+        os.system('sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup')
+        os.system('sudo apt update')
+        os.system('sudo apt install snapd')
+        os.system('sudo snap install pycharm-community --classic')

@@ -68,3 +68,14 @@ class Progams():
         os.system("sudo apt install yarn -g")
         os.system("echo yarn is installed")
         os.system("yarn --version")
+    def perl():
+        os.system("sudo apt install perl -y")
+        os.system("echo perl is installed")
+        os.system("perl --version")
+
+    def flutter():
+        os.system('https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.0.4-stable.tar.xz')
+        os.system('tar xf ~/flutter_linux_3.0.4-stable.tar.xz')
+        os.system('export PATH="$PATH:`pwd`/flutter/bin"')
+        os.system('flutter precache')
+        os.system('flutter doctor')
