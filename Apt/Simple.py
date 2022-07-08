@@ -68,6 +68,17 @@ class Progams():
         os.system("sudo apt install yarn -g")
         os.system("echo yarn is installed")
         os.system("yarn --version")
+    def perl():
+        os.system("sudo apt install perl -y")
+        os.system("echo perl is installed")
+        os.system("perl --version")
+
+    def flutter():
+        os.system('https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.0.4-stable.tar.xz')
+        os.system('tar xf ~/flutter_linux_3.0.4-stable.tar.xz')
+        os.system('export PATH="$PATH:`pwd`/flutter/bin"')
+        os.system('flutter precache')
+        os.system('flutter doctor')
 
 class Browser():
     def brave():
@@ -86,6 +97,15 @@ class Browser():
     def firefox():
         os.system('sudo apt install firefox')
         os.system('echo firefox is installed')
+
+    def opera():
+        os.system('wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -')
+        os.system('sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-stable/ stable non-free"')
+        os.system('sudo apt install opera-stable')
+        os.system('echo opera is installed')
+import os
+
+
 class Program():
     def vs_code():
         os.system("sudo apt install software-properties-common apt-transport-https wget")
@@ -100,8 +120,6 @@ class Program():
         os.system('sudo apt-get update')
         os.system('sudo apt-get install atom')
         os.system('echo Atom is installed')
-    
-
     
     def postman():
         os.system('sudo apt install snapd')
@@ -136,8 +154,40 @@ class Program():
         os.system('sudo apt install gh')
         os.system('echo Github-cli is installed')
 
+    def docker():
+        os.system('sudo apt install docker.io')
+        os.system('docker --version')
+        os.system('sudo systemctl start docker')
+        os.system('sudo systemctl enable docker')
+        os.system('sudo systemctl status docker')
+    
+    def docker_compose():
+        os.system('sudo apt install docker-compose')
+        os.system('docker-compose --version')
+        os.system('echo Docker-compose is installed')
+    
+    def docker_machine():
+        os.system('sudo apt install docker-machine')
+        os.system('docker-machine --version')
+        os.system('echo Docker-machine is installed')
+    
+    def intelli_j():
+        os.system('sudo add-apt-repository ppa:mmk2410/intellij-idea-community')
+        os.system('sudo apt update')
+        os.system('sudo apt install intellij-idea-community')
+
+    def snap():
+        os.system('sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup')
+        os.system('sudo apt update')
+        os.system('sudo apt install snapd')
+    
+    def pycahrm():
+        os.system('sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup')
+        os.system('sudo apt update')
+        os.system('sudo apt install snapd')
+        os.system('sudo snap install pycharm-community --classic')
 def br():
-    print('\n1. brave  \n2. chrome \n3. firefox \n4. Exit')
+    print('\n1. brave  \n2. chrome \n3. firefox \n4. opera \n5. exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Browser.brave()
@@ -146,10 +196,12 @@ def br():
     elif choice == 3:
         Browser.firefox()
     elif choice == 4:
+        Browser.opera()
+    elif choice == 5:
         exit()
 
 def pr():
-    print('\n1. python \n2. java \n3. node \n4. c \n5. c++ \n6. c# \n7. go \n8. ruby \n9. php \n10. java script \n11. kotlin \n12. rust \n13. go lang \n14. Exit')
+    print('\n1. python \n2. java \n3. node \n4. c \n5. c++ \n6. c# \n7. go \n8. ruby \n9. php \n10. java script \n11. kotlin \n12. rust \n13. go lang \n14. Perl \n15. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Progams.python()
@@ -178,10 +230,12 @@ def pr():
     elif choice == 13:
         Progams.go_lang()
     elif choice == 14:
+        Progams.perl()
+    elif choice == 15:
         exit()
 
 def pg():
-    print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli \n8. Exit')
+    print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli \n8. IntelliJ IDEA \n9. docker \n10. docker_compose \n11. docker_machine \n12 snap \n13. Pycharm \n14. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Program.vs_code()
@@ -198,17 +252,30 @@ def pg():
     elif choice == 7:
         Program.github_cli()
     elif choice == 8:
+        Program.intelli_j()
+    elif choice == 9:
+        Program.docker()
+    elif choice == 10:
+        Program.docker_compose()
+    elif choice == 11:
+        Program.docker_machine()
+    elif choice == 12:
+        Program.snap()
+    elif choice == 13:
+        Program.pycahrm()
+    elif choice == 14:
         exit()
 
+    
 
 while True:
     print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
-            br()
+        br()
     elif choice == 2:
-            pr()
+        pr()
     elif choice == 3:
-            pg()
+        pg()
     elif choice == 4:
-            exit()
+        exit()
