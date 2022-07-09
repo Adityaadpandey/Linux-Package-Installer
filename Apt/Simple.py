@@ -238,7 +238,7 @@ def pg():
     print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli \n8. IntelliJ IDEA \n9. docker \n10. docker_compose \n11. docker_machine \n12 snap \n13. Pycharm \n14. Exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
-        Program.vs_code()
+        print("You need to Install through .sh version on the terminal")
     elif choice == 2:
         Program.atom()
     elif choice == 3:
