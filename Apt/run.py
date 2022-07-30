@@ -1,7 +1,7 @@
 from .utils.Brow import Browser
 from .utils.Lang import Progams
 from .utils.Programs import Program
-
+import os
 
 def br():
     print('\n1. brave  \n2. chrome \n3. firefox \n4. opera \n5. exit')
@@ -86,7 +86,7 @@ def pg():
     
 def main():
     while True:
-        print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Exit')
+        print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Update the sysytem \n5. Exit')
         choice = int(input('\nEnter your choice: '))
         if choice == 1:
             br()
@@ -95,4 +95,6 @@ def main():
         elif choice == 3:
             pg()
         elif choice == 4:
+            os.system('sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt autoclean')
+        elif choice == 5:
             exit()
