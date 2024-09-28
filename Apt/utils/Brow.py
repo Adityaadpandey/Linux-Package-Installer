@@ -23,3 +23,7 @@ class Browser():
         os.system('sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-stable/ stable non-free"')
         os.system('sudo apt install opera-stable')
         os.system('echo opera is installed')
+    
+    def chromium():
+        os.system('sudo apt install -y chromium-browser')
+        os.system('echo chromium is installed')

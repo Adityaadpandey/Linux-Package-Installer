@@ -4,7 +4,7 @@ from .utils.Programs import Program
 import os
 
 def br():
-    print('\n1. brave  \n2. chrome \n3. firefox \n4. opera \n5. exit')
+    print('\n1. brave  \n2. chrome \n3. firefox \n4. opera \n5. chromium \n6. exit')
     choice = int(input('\nEnter your choice: '))
     if choice == 1:
         Browser.brave()
@@ -15,6 +15,8 @@ def br():
     elif choice == 4:
         Browser.opera()
     elif choice == 5:
+        Browser.chromium()
+    elif choice == 6:
         exit()
 
 def pr():
