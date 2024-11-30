@@ -1,7 +1,7 @@
 import distro
 from Apt.run import main as apt_main
 
-name = distro.linux_distribution()
+name = distro.id()
 
 apt = ["Linux Mint", "Ubuntu", "Debian","Lubuntu","Xubuntu","Kubuntu","peppermint","Knoppix","bodhi linux", "Deepin"]
 
