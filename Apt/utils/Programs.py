@@ -1,83 +1,127 @@
 import os
 
+class Program:
+    @staticmethod
+    def install_program(commands, success_message):
+        """Helper method to install programs and verify installation."""
+        for command in commands:
+            result = os.system(command)
+            if result != 0:
+                print(f"Error executing: {command}")
+                return
+        print(success_message)
 
-class Program():
+    @staticmethod
     def vs_code():
-        os.system("sudo apt install software-properties-common apt-transport-https wget")
-        os.system("wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -")
-        os.system('sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"')
-        os.system("sudo apt install code")
-        os.system("echo VS-code is installed")
+        commands = [
+            "sudo apt install software-properties-common apt-transport-https wget -y",
+            "wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -",
+            'sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"',
+            "sudo apt install code -y"
+        ]
+        Program.install_program(commands, "VS Code is installed")
 
+    @staticmethod
     def atom():
-        os.system('wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -')
-        os.system('sudo sh -c "echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list"')
-        os.system('sudo apt-get update')
-        os.system('sudo apt-get install atom')
-        os.system('echo Atom is installed')
-    
+        commands = [
+            'wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -',
+            'sudo sh -c "echo \"deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main\" > /etc/apt/sources.list.d/atom.list"',
+            'sudo apt-get update',
+            'sudo apt-get install atom -y'
+        ]
+        Program.install_program(commands, "Atom is installed")
+
+    @staticmethod
     def postman():
-        os.system('sudo apt install snapd')
-        os.system('sudo snap install postman')
-        os.system('echo Postman is installed')
+        commands = [
+            'sudo apt install snapd -y',
+            'sudo snap install postman'
+        ]
+        Program.install_program(commands, "Postman is installed")
 
+    @staticmethod
     def vim():
-        os.system('sudo apt install vim')
-        os.system('echo Vim is installed')
-    
+        commands = [
+            'sudo apt install vim -y'
+        ]
+        Program.install_program(commands, "Vim is installed")
+
+    @staticmethod
     def sublime_text():
-        os.system('sudo apt install sublime-text')
-        os.system('echo Sublime-text is installed')
-    
-    def vscode():
-        os.system('sudo apt install software-properties-common apt-transport-https wget')
-        os.system('wget -qO - https://packages.microsoft.com/keys/microsoft.asc - | sudo apt-key add -')
-        os.system('sudo sh -c "echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list"')
-        os.system('sudo apt-get update')
-        os.system('sudo apt-get install code')
-        os.system('echo VS-code is installed')
-        
+        commands = [
+            'sudo apt install sublime-text -y'
+        ]
+        Program.install_program(commands, "Sublime Text is installed")
+
+    @staticmethod
     def git():
-        os.system('sudo apt install git')
-        os.system('echo Git is installed')
+        commands = [
+            'sudo apt install git -y'
+        ]
+        Program.install_program(commands, "Git is installed")
 
+    @staticmethod
     def github_cli():
-        os.system('curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg')
-        os.system('sudo apt-key add /usr/share/keyrings/githubcli-archive-keyring.gpg')
-        os.system('echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null')
-        os.system('sudo apt update')
-        os.system('sudo apt install gh')
-        os.system('echo Github-cli is installed')
+        commands = [
+            'curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg',
+            'sudo apt-key add /usr/share/keyrings/githubcli-archive-keyring.gpg',
+            'echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null',
+            'sudo apt update',
+            'sudo apt install gh -y'
+        ]
+        Program.install_program(commands, "GitHub CLI is installed")
 
+    @staticmethod
     def docker():
-        os.system('sudo apt install docker.io')
-        os.system('docker --version')
-        os.system('sudo systemctl start docker')
-        os.system('sudo systemctl enable docker')
-        os.system('sudo systemctl status docker')
-    
-    def docker_compose():
-        os.system('sudo apt install docker-compose')
-        os.system('docker-compose --version')
-        os.system('echo Docker-compose is installed')
-    
-    def docker_machine():
-        os.system('sudo apt install docker-machine')
-        os.system('docker-machine --version')
-        os.system('echo Docker-machine is installed')
-    
-    def intelli_j():
-        os.system('sudo add-apt-repository ppa:mmk2410/intellij-idea-community')
-        os.system('sudo apt update')
-        os.system('sudo apt install intellij-idea-community')
+        commands = [
+            'sudo apt install docker.io -y',
+            'docker --version',
+            'sudo systemctl start docker',
+            'sudo systemctl enable docker',
+            'sudo systemctl status docker'
+        ]
+        Program.install_program(commands, "Docker is installed")
 
+    @staticmethod
+    def docker_compose():
+        commands = [
+            'sudo apt install docker-compose -y',
+            'docker-compose --version'
+        ]
+        Program.install_program(commands, "Docker Compose is installed")
+
+    @staticmethod
+    def docker_machine():
+        commands = [
+            'sudo apt install docker-machine -y',
+            'docker-machine --version'
+        ]
+        Program.install_program(commands, "Docker Machine is installed")
+
+    @staticmethod
+    def intelli_j():
+        commands = [
+            'sudo add-apt-repository ppa:mmk2410/intellij-idea-community -y',
+            'sudo apt update',
+            'sudo apt install intellij-idea-community -y'
+        ]
+        Program.install_program(commands, "IntelliJ IDEA Community is installed")
+
+    @staticmethod
     def snap():
-        os.system('sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup')
-        os.system('sudo apt update')
-        os.system('sudo apt install snapd')
-    
-    def pycahrm():
-        os.system('sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup')
-        os.system('sudo apt update')
-        os.system('sudo apt install snapd')
-        os.system('sudo snap install pycharm-community --classic')
+        commands = [
+            'sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup',
+            'sudo apt update',
+            'sudo apt install snapd -y'
+        ]
+        Program.install_program(commands, "Snapd is installed")
+
+    @staticmethod
+    def pycharm():
+        commands = [
+            'sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup',
+            'sudo apt update',
+            'sudo apt install snapd -y',
+            'sudo snap install pycharm-community --classic'
+        ]
+        Program.install_program(commands, "PyCharm Community is installed")

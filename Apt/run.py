@@ -1,95 +1,94 @@
-from .utils.Brow import Browser
-from .utils.Lang import Progams
-from .utils.Programs import Program
 import os
+from .utils.Brow import Browser
+from .utils.Lang import Programs
+from .utils.Programs import Program
 
+# Function to handle browser installation
 def br():
-    print('\n1. brave  \n2. chrome \n3. firefox \n4. opera \n5. chromium \n6. exit')
-    choice = int(input('\nEnter your choice: '))
-    if choice == 1:
-        Browser.brave()
-    elif choice == 2:
-        Browser.chrome()
-    elif choice == 3:
-        Browser.firefox()
-    elif choice == 4:
-        Browser.opera()
-    elif choice == 5:
-        Browser.chromium()
-    elif choice == 6:
-        exit()
+    browsers = {
+        1: Browser.brave,
+        2: Browser.chrome,
+        3: Browser.firefox,
+        4: Browser.opera,
+        5: Browser.chromium,
+        6: exit
+    }
 
+    print('\n1. Brave \n2. Chrome \n3. Firefox \n4. Opera \n5. Chromium \n6. Exit')
+    choice = int(input('\nEnter your choice: '))
+
+    # Call the appropriate function based on the user input
+    action = browsers.get(choice)
+    if action:
+        action()
+    else:
+        print("Invalid choice. Please try again.")
+
+# Function to handle programming language installation
 def pr():
-    print('\n1. python \n2. java \n3. node \n4. c \n5. c++ \n6. c# \n7. go \n8. ruby \n9. php \n10. java script \n11. kotlin \n12. rust \n13. go lang \n14. Perl \n15. Exit')
-    choice = int(input('\nEnter your choice: '))
-    if choice == 1:
-        Progams.python()
-    elif choice == 2:
-        Progams.java()
-    elif choice == 3:
-        Progams.node()
-    elif choice == 4:
-        Progams.c()
-    elif choice == 5:
-        Progams.c_plus()
-    elif choice == 6:
-        Progams.c_sharp()
-    elif choice == 7:
-        Progams.go()
-    elif choice == 8:
-        Progams.ruby()
-    elif choice == 9:
-        Progams.php()
-    elif choice == 10:
-        Progams.java_script()
-    elif choice == 11:
-        Progams.kotlin()
-    elif choice == 12:
-        Progams.rust()
-    elif choice == 13:
-        Progams.go_lang()
-    elif choice == 14:
-        Progams.perl()
-    elif choice == 15:
-        exit()
+    languages = {
+        1: Progams.python,
+        2: Progams.java,
+        3: Progams.node,
+        4: Progams.c,
+        5: Progams.c_plus,
+        6: Progams.c_sharp,
+        7: Progams.go,
+        8: Progams.ruby,
+        9: Progams.php,
+        10: Progams.java_script,
+        11: Progams.kotlin,
+        12: Progams.rust,
+        13: Progams.go_lang,
+        14: Progams.perl,
+        15: exit
+    }
 
+    print('\n1. Python \n2. Java \n3. Node \n4. C \n5. C++ \n6. C# \n7. Go \n8. Ruby \n9. PHP \n10. JavaScript \n11. Kotlin \n12. Rust \n13. Go Lang \n14. Perl \n15. Exit')
+    choice = int(input('\nEnter your choice: '))
+
+    # Call the appropriate function based on the user input
+    action = languages.get(choice)
+    if action:
+        action()
+    else:
+        print("Invalid choice. Please try again.")
+
+# Function to handle programming tools installation
 def pg():
-    print('\n1. vs_code \n2. atom \n3. postman \n4. vim \n5. sublime text \n6. git \n7. github cli \n8. IntelliJ IDEA \n9. docker \n10. docker_compose \n11. docker_machine \n12 snap \n13. Pycharm \n14. Exit')
-    choice = int(input('\nEnter your choice: '))
-    if choice == 1:
-        Program.vs_code()
-    elif choice == 2:
-        Program.atom()
-    elif choice == 3:
-        Program.postman()
-    elif choice == 4:
-        Program.vim()
-    elif choice == 5:
-        Program.sublime_text()
-    elif choice == 6:
-        Program.git()
-    elif choice == 7:
-        Program.github_cli()
-    elif choice == 8:
-        Program.intelli_j()
-    elif choice == 9:
-        Program.docker()
-    elif choice == 10:
-        Program.docker_compose()
-    elif choice == 11:
-        Program.docker_machine()
-    elif choice == 12:
-        Program.snap()
-    elif choice == 13:
-        Program.pycahrm()
-    elif choice == 14:
-        exit()
+    tools = {
+        1: Program.vs_code,
+        2: Program.atom,
+        3: Program.postman,
+        4: Program.vim,
+        5: Program.sublime_text,
+        6: Program.git,
+        7: Program.github_cli,
+        8: Program.intelli_j,
+        9: Program.docker,
+        10: Program.docker_compose,
+        11: Program.docker_machine,
+        12: Program.snap,
+        13: Program.pycharm,
+        14: exit
+    }
 
-    
+    print('\n1. VS Code \n2. Atom \n3. Postman \n4. Vim \n5. Sublime Text \n6. Git \n7. GitHub CLI \n8. IntelliJ IDEA \n9. Docker \n10. Docker Compose \n11. Docker Machine \n12. Snap \n13. PyCharm \n14. Exit')
+    choice = int(input('\nEnter your choice: '))
+
+    # Call the appropriate function based on the user input
+    action = tools.get(choice)
+    if action:
+        action()
+    else:
+        print("Invalid choice. Please try again.")
+
+# Main menu function
 def main():
     while True:
-        print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Update the sysytem \n5. Exit')
+        print('\n1. Browser \n2. Programming Language \n3. Programming Tools \n4. Update the System \n5. Exit')
         choice = int(input('\nEnter your choice: '))
+
         if choice == 1:
             br()
         elif choice == 2:
@@ -100,3 +99,8 @@ def main():
             os.system('sudo apt update && sudo apt upgrade -y && sudo apt autoremove && sudo apt autoclean')
         elif choice == 5:
             exit()
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
