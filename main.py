@@ -4,7 +4,7 @@ from pacman.run import main as pacman_main
 
 name = distro.name()
 
-apt = ["Linux Mint", "Ubuntu", "Debian", "Lubuntu", "Xubuntu", "Kubuntu", "peppermint", "Knoppix", "bodhi linux", "Deepin","Pop!_OS"]
+apt = ["Linux Mint", "Ubuntu", "Debian", "Lubuntu", "Xubuntu", "Kubuntu", "peppermint", "Knoppix", "bodhi linux", "Deepin","Pop!_OS", "Kali"]
 arch = ["Arch Linux", "Manjaro", "EndeavourOS", "ArcoLinux", "Anarchy Linux"]
 
 if name in apt:
